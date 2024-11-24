@@ -1,0 +1,23 @@
+MapReduce é um modelo de programação desenhado para processar grandes volumes de dados em paralelo, 
+dividindo o trabalho em um conjunto de tarefas independentes. Programas MapReduce são escritos em um determinado 
+estilo influenciado por construções de programação funcionais, especificamente expressões idiomáticas para listas de 
+processamento de dados. Este módulo explica a natureza do presente modelo de programação e como ela pode ser usada 
+para escrever programas que são executados no ambiente Hadoop.
+
+MapReduce é um modelo de programação, e framework introduzido pelo Google para suportar computações paralelas 
+em grandes coleções de dados em clusters de computadores. O MapReduce passa a ser considerado um novo modelo 
+computacional distribuído, inspirado pelas funções map e reduce usadas comumente em programação funcional. 
+MapReduce é um “Data-Oriented” que processa dados em duas fases primárias: Map e Reduce.
+
+Função Map
+A função Map, ou função de mapeamento, leva uma série de pares (chave / valor) processa cada um e gera zero ou 
+mais (chave / valor) pares de saída. Os tipos de entrada e de saída do mapa podem ser (e geralmente são) diferentes 
+umas das outras. Se o aplicativo está fazendo uma contagem de palavras, a função de mapa iria quebrar a linha em 
+palavras e de saída de um par chave / valor para cada palavra. Cada par de saída deve conter a palavra como a chave e 
+o número de ocorrências dessa palavra na linha como o valor.
+
+Função Reduce
+O quadro chama Reduzir função da aplicação uma vez para cada chave única na ordem de classificação. 
+O Reduce pode percorrer os valores que estão associados com a chave e produzir zero ou mais saídas. No exemplo a 
+contagem de palavras, a função Reduce toma os valores de entrada, resume-os e gera uma única saída da palavra e a soma 
+final.
